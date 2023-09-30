@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>AlphaShore Client</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+	<h1>Welcome to Alphashore</h1>
+	<p>Securely <u>Host</u> and browse infinite sites with the Alphashore Network for <u>free</u>.</p>
+
+	<div class="btns">
+		<div class="btn1" onclick="stbm()" title="Browse"><span
+				class="material-symbols-rounded">wifi_find</span><br>Browse</div>
+		<div class="btn1" onclick="gid('hstbc').showModal()" title="host"><span
+				class="material-symbols-rounded">rocket_launch</span><br>Host</div>
+		<div class="btn1" onclick="gid('se').showModal()" title="search"><span
+				class="material-symbols-rounded">search</span><br>Search</div>
+	</div>
+
+	<dialog id="hstbc">
+		<div class="bnav">
+			<button onclick="gid('hstbc').close();" id="snb" class="clbt"><span class="material-symbols-rounded si">
+					close
+				</span></button>
+			<b>Hosting A server</b>
+		</div>
+		<hr>
+		<div class="iftr"><b>No Worries! It's OnDev</b><br>You can <button onclick="hostSite()">Click Here</button> to
+			host a server.</div>
+		<hr>
+		<span>Enter a domain</span>
+		<div class="diibf">
+			<input placeholder="ex: googol" maxlength="15" id="tdi1">
+			<button><span class="material-symbols-rounded si">
+					arrow_forward
+				</span></button>
+		</div>
+	</dialog>
+	<dialog id="hp">
+		<div class="bnav">
+			<button onclick="gid('hp').close(); amihost = false;" id="snb"><span class="material-symbols-rounded si">
+					close
+				</span></button>
+			<input type="text" id="mydm" placeholder="Your Domain" readonly value="404" onclick="this.select()">
+			<button id="snb" title="Public 
+Anyone could access this server"><span class="material-symbols-rounded si">
+					public
+				</span></button>
+		</div>
+		<textarea id="tbsd" maxlength="100" placeholder="Data to serve">Hello World</textarea>
+		<p>
+			<b>Page Title: </b>
+		</p>
+		<input placeholder="Search Terms for your page..." maxlength="30" value="New Page" id="ttbs">
+	</dialog>
+	<dialog id="br">
+		<div class="bnav">
+			<button onclick="gid('br').close()" id="snb"><span class="material-symbols-rounded si">
+					close
+				</span></button>
+			<input type="text" id="buin" placeholder="Enter domain...">
+			<button onclick="brg()" id="snb"><span class="material-symbols-rounded si">
+					wifi_find
+				</span></button>
+			<g id="load"></g>
+		</div>
+		<div id="tfr">
+			<h1 style="color: #3a4045; padding-top: 20vh; user-select: none; text-align: center;">AlphaShore</h1>
+		</div>
+	</dialog>
+	<dialog id="se">
+		<div class="senav">
+			<button onclick="gid('se').close(); amihost = false;" id="snb"><span class="material-symbols-rounded si">
+					close
+				</span></button>
+			<input id="seinp" placeholder="Search AlphaShore..." onkeypress="goq(event)">
+			<button id="sebtn" onclick="sesearch();"><span class="material-symbols-rounded">
+					search
+				</span></button>
+		</div>
+		<div id="seres">
+			<div class="oftr">
+				<h3>What can I do?</h3>
+				<p>
+				<ol>
+					<li>serve some basic information.</li>
+					<li>search active servers for data based on title content.</li>
+					<li>Results will depend on activity of other servers.</li>
+				</ol>
+				</p>
+			</div>
+		</div>
+	</dialog>
+	<script src="script.js"></script>
+</body>
+
+</html>
